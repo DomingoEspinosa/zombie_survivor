@@ -14,4 +14,8 @@ public class Survivor {
     public int getWounds() {
         return this.wounds;
     }
+
+    public void wound() {
+        throw new UnsupportedOperationException();
+    }
 }
