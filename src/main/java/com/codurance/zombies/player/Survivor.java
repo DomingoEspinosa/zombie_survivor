@@ -16,6 +16,12 @@ public class Survivor {
     }
 
     public void wound() {
-        throw new UnsupportedOperationException();
+        if (alive()) {
+            this.wounds ++;
+        }
+    }
+
+    private boolean alive() {
+        return this.wounds < 2;
     }
 }
