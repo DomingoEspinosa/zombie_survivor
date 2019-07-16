@@ -23,4 +23,10 @@ public class SurvivorShould {
         assertThat(survivor.isAlive(), is(false));
 
     }
+
+    @Test
+    public void have_3_turns_at_the_beginning() {
+        Survivor survivor = new Survivor("Juan");
+        assertThat(survivor.getTurns(), is(3));
+    }
 }
