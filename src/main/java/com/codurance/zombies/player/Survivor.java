@@ -33,14 +33,6 @@ public class Survivor {
         return this.turns;
     }
 
-    public void pickUpEquipment(Equipment equipment) {
-        if (this.backPack.getNumEquipments() < 5) {
-            this.backPack.pickUpEquipment(equipment);
-        } else {
-            throw new UnsupportedOperationException();
-        }
-    }
-
     public void useEquipmentInHand(Equipment equipment) {
         this.backPack.useEquipmentInHand(equipment);
     }
@@ -51,5 +43,9 @@ public class Survivor {
 
     public int getElementsInHand() {
         return this.backPack.getElementsInHand();
+    }
+
+    public void pickUpEquipment(Equipment equipment) {
+        this.backPack.pickUpEquipment(equipment);
     }
 }
