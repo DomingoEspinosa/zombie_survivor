@@ -21,6 +21,8 @@ public class SurvivorShould {
         Survivor survivor = new Survivor("Juan");
         survivor.wound();
         assertThat(survivor.isAlive(), is(true));
+        survivor.wound();
+        assertThat(survivor.isAlive(), is(false));
 
     }
 }

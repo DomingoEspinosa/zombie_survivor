@@ -26,6 +26,6 @@ public class Survivor {
     }
 
     public boolean isAlive() {
-        throw new UnsupportedOperationException();
+        return alive();
     }
 }
