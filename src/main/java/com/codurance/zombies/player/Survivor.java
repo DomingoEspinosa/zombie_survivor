@@ -24,4 +24,8 @@ public class Survivor {
     private boolean alive() {
         return this.wounds < 2;
     }
+
+    public boolean isAlive() {
+        throw new UnsupportedOperationException();
+    }
 }
