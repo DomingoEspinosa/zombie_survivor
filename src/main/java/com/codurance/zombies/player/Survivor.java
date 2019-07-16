@@ -21,7 +21,7 @@ public class Survivor {
 
     public void wound() {
         if (isAlive()) {
-            this.wounds ++;
+            this.wounds++;
         }
     }
 
@@ -33,9 +33,12 @@ public class Survivor {
         return this.turns;
     }
 
-
     public void pickUpEquipment(Equipment equipment) {
-        this.backPack.pickUpEquipment(equipment);
+        if (this.backPack.getNumEquipments() < 5) {
+            this.backPack.pickUpEquipment(equipment);
+        } else {
+            throw new UnsupportedOperationException();
+        }
     }
 
     public void useEquipmentInHand(Equipment equipment) {
