@@ -9,7 +9,7 @@ public class SurvivorShould {
     @Test
     public void mustBornHealthy() {
         Survivor survivor = new Survivor("Juan");
-        int wounds = survivor.getWounds();
-        assertThat(wounds, is(0));
+        assertThat(survivor.getWounds(), is(0));
+        
     }
 }
