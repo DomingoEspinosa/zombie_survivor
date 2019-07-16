@@ -1,14 +1,20 @@
 package com.codurance.zombies.player;
 
+import com.codurance.zombies.equipment.Equipment;
+
+import java.util.LinkedList;
+
 public class Survivor {
     private int turns;
     private int wounds;
     private String name;
+    private LinkedList<Equipment> backpack;
 
     public Survivor(String name) {
         this.name = name;
         this.wounds = 0;
         this.turns = 3;
+        this.backpack = new LinkedList<Equipment>();
     }
 
     public int getWounds() {
@@ -27,5 +33,13 @@ public class Survivor {
 
     public int getTurns() {
         return this.turns;
+    }
+
+    public void pickUpEquipment(Equipment equipment) {
+        this.backpack.add(equipment);
+    }
+
+    public int getNumEquipments() {
+        return this.backpack.size();
     }
 }
