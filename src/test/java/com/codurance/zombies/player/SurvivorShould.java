@@ -49,5 +49,24 @@ public class SurvivorShould {
         assertThat(survivor.getNumEquipments(), is(5));
     }
 
-    
+    @Test
+    public void have_a_equipment_in_hand() {
+        Survivor survivor = new Survivor("Juan");
+        Equipment baseBallBat = new BaseBallBat();
+        Equipment fryingPan = new FryingPan();
+        Equipment katana = new Katana();
+        Equipment pistol = new Pistol();
+        Equipment water = new BottledWater();
+
+        survivor.pickUpEquipment(baseBallBat);
+        survivor.pickUpEquipment(fryingPan);
+        survivor.pickUpEquipment(katana);
+        survivor.pickUpEquipment(pistol);
+        survivor.pickUpEquipment(water);
+
+        survivor.useEquipmentInHand(katana);
+        survivor.useEquipmentInHand(pistol);
+
+        assertThat(survivor.getNumEquipments(), is(5));
+    }
 }

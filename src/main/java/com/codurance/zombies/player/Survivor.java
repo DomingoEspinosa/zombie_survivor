@@ -9,6 +9,7 @@ public class Survivor {
     private int wounds;
     private String name;
     private LinkedList<Equipment> backpack;
+    private LinkedList<Equipment> elementsInHand;
 
     public Survivor(String name) {
         this.name = name;
@@ -41,5 +42,9 @@ public class Survivor {
 
     public int getNumEquipments() {
         return this.backpack.size();
+    }
+
+    public void useEquipmentInHand(Equipment equipment) {
+        throw new UnsupportedOperationException();
     }
 }
