@@ -16,6 +16,7 @@ public class Survivor {
         this.wounds = 0;
         this.turns = 3;
         this.backpack = new LinkedList<Equipment>();
+        this.elementsInHand = new LinkedList<Equipment>();
     }
 
     public int getWounds() {
@@ -43,8 +44,12 @@ public class Survivor {
     public int getNumEquipments() {
         return this.backpack.size();
     }
-
+;
     public void useEquipmentInHand(Equipment equipment) {
-        throw new UnsupportedOperationException();
+        this.elementsInHand.add(equipment);
+    }
+
+    public int getElementsInHand() {
+        return this.elementsInHand.size();
     }
 }

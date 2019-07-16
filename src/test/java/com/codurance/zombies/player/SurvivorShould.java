@@ -68,5 +68,6 @@ public class SurvivorShould {
         survivor.useEquipmentInHand(pistol);
 
         assertThat(survivor.getNumEquipments(), is(5));
+        assertThat(survivor.getElementsInHand(), is(2));
     }
 }
