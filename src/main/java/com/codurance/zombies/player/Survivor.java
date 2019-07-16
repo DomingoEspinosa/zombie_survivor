@@ -26,6 +26,6 @@ public class Survivor {
     }
 
     public int getTurns() {
-        throw new UnsupportedOperationException();
+        return this.turns;
     }
 }
